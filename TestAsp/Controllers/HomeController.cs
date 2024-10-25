@@ -8,8 +8,10 @@ namespace TestAsp.Controllers
 {
     public class HomeController : Controller
     {
+        public Bad b = new Bad();
         public ActionResult Index()
         {
+            b.M();
             return View();
         }
 
