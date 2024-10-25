@@ -10,9 +10,14 @@ namespace TestAsp
     {
         public void M()
         {
+            DoPrint("Hello");
+            DoPrint(null);
             Logger.Log("Hello, World!");
         }
-
+        void DoPrint(object o)
+        {
+            Console.WriteLine(o.ToString());
+        }
         static class Logger
         {
             [Obsolete("Use Log(LogLevel level, string s) instead")]
